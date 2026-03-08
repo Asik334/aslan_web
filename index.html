@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASLAN DEV | CYBERPORTFOLIO</title>
     <!-- Google Fonts: Orbitron -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Grotesk:wght@300;500&display=swap"
+        rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <style>
         :root {
             --bg-color: #0a0a0f;
@@ -42,7 +45,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
+            background-image:
                 linear-gradient(to right, rgba(0, 243, 255, 0.05) 1px, transparent 1px),
                 linear-gradient(to bottom, rgba(0, 243, 255, 0.05) 1px, transparent 1px);
             background-size: 50px 50px;
@@ -53,8 +56,13 @@
         }
 
         @keyframes grid-move {
-            from { background-position: 0 0; }
-            to { background-position: 0 100%; }
+            from {
+                background-position: 0 0;
+            }
+
+            to {
+                background-position: 0 100%;
+            }
         }
 
         .container {
@@ -89,7 +97,8 @@
         }
 
         /* Эффект глитча */
-        .glitch-text::before, .glitch-text::after {
+        .glitch-text::before,
+        .glitch-text::after {
             content: "ASLAN DEV";
             position: absolute;
             top: 0;
@@ -114,12 +123,23 @@
         }
 
         @keyframes glitch-1 {
-            0% { clip: rect(20px, 9999px, 15px, 0); }
-            100% { clip: rect(80px, 9999px, 90px, 0); }
+            0% {
+                clip: rect(20px, 9999px, 15px, 0);
+            }
+
+            100% {
+                clip: rect(80px, 9999px, 90px, 0);
+            }
         }
+
         @keyframes glitch-2 {
-            0% { clip: rect(10px, 9999px, 35px, 0); }
-            100% { clip: rect(40px, 9999px, 50px, 0); }
+            0% {
+                clip: rect(10px, 9999px, 35px, 0);
+            }
+
+            100% {
+                clip: rect(40px, 9999px, 50px, 0);
+            }
         }
 
         .hero p {
@@ -319,12 +339,48 @@
         }
 
         @media (max-width: 768px) {
-            .hero p { font-size: 0.9rem; }
-            .section-title { font-size: 1.8rem; }
-            .contact-links { gap: 20px; }
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+            }
+
+            .contact-links {
+                gap: 20px;
+            }
+        }
+
+        .about-card {
+            transition: all 0.4s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 0 25px var(--neon-blue);
+            border-color: var(--neon-blue);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 28px;
+            color: white;
+            box-shadow: 0 0 20px #25D366;
+            z-index: 999;
         }
     </style>
 </head>
+
 <body>
 
     <div class="grid-background"></div>
@@ -336,6 +392,10 @@
                 <h1 class="glitch-text" data-text="ASLAN WEB">ASLAN WEB</h1>
             </div>
             <p>Создаю сайты для бизнеса будущего</p>
+            <p>Создаю сайты, которые приводят клиентов</p>
+            <p style="color:var(--neon-blue)">
+                🚀 Сайт для бизнеса за 1-3 дня
+            </p>
             <div class="btn-container">
                 <a href="#projects" class="cyber-btn">Посмотреть проекты</a>
                 <a href="#contacts" class="cyber-btn btn-pink">Связаться</a>
@@ -346,7 +406,8 @@
         <section id="about" class="reveal">
             <h2 class="section-title">ОБО_МНЕ.exe</h2>
             <div class="about-card">
-                <p>Меня зовут <b>Аслан</b>. Я веб-разработчик, специализирующийся на создании высокотехнологичных решений для бизнеса. Мой код — это архитектура завтрашнего дня.</p>
+                <p>Меня зовут <b>Аслан</b>. Я веб-разработчик, специализирующийся на создании высокотехнологичных
+                    решений для бизнеса. Мой код — это архитектура завтрашнего дня.</p>
                 <ul class="specialization-list">
                     <li>Сайты для мебельных компаний</li>
                     <li>Сайты для малого бизнеса</li>
@@ -369,7 +430,8 @@
                         • Быстрая загрузка <br>
                         • Анимации JS
                     </div>
-                    <a href="https://premium-rho.vercel.app/" class="cyber-btn" style="font-size: 0.7rem; padding: 10px 20px;">Открыть сайт</a>
+                    <a href="https://premium-rho.vercel.app/" class="cyber-btn"
+                        style="font-size: 0.7rem; padding: 10px 20px;">Открыть сайт</a>
                 </div>
                 <!-- Проект 2 -->
                 <div class="project-card">
@@ -380,7 +442,8 @@
                         • Адаптивный дизайн <br>
                         • Современный UI
                     </div>
-                    <a href="https://tekamebel.kz/" class="cyber-btn" style="font-size: 0.7rem; padding: 10px 20px;">Открыть сайт</a>
+                    <a href="https://tekamebel.kz/" class="cyber-btn"
+                        style="font-size: 0.7rem; padding: 10px 20px;">Открыть сайт</a>
                 </div>
                 <!-- Проект 3 -->
                 <div class="project-card">
@@ -391,7 +454,8 @@
                         • Быстрая загрузка <br>
                         • Анимации JS
                     </div>
-                    <a href="https://uyut-mebel.vercel.app/" class="cyber-btn" style="font-size: 0.7rem; padding: 10px 20px;">Открыть сайт</a>
+                    <a href="https://uyut-mebel.vercel.app/" class="cyber-btn"
+                        style="font-size: 0.7rem; padding: 10px 20px;">Открыть сайт</a>
                 </div>
             </div>
         </section>
@@ -411,32 +475,174 @@
 
         <!-- SERVICES -->
         <section id="services" class="reveal">
+
             <h2 class="section-title">УСЛУГИ.srv</h2>
+
             <div class="projects-grid">
-                <div class="about-card" style="padding: 25px;">
-                    <h3 style="color: var(--neon-blue); font-family: var(--cyber-font); margin-bottom: 15px;">LANDING PAGE</h3>
-                    <p>Одностраничный сайт с высокой конверсией и агрессивным дизайном.</p>
+
+                <!-- LANDING -->
+
+                <div class="about-card">
+
+                    <h3 style="color: var(--neon-blue); font-family: var(--cyber-font); margin-bottom: 15px;">
+                        LANDING PAGE
+                    </h3>
+
+                    <ul>
+                        <li>Цена: <b>от 50 000 ₸</b></li>
+                        <li>Срок: <b>1–2 дня</b></li>
+                    </ul>
+
+                    <p><b>Что входит:</b></p>
+
+                    <ul>
+                        <li>Современный дизайн</li>
+                        <li>Адаптация под телефон</li>
+                        <li>WhatsApp кнопка</li>
+                        <li>Форма заявок</li>
+                        <li>SEO базовая оптимизация</li>
+                        <li>Публикация сайта</li>
+                    </ul>
+
                 </div>
-                <div class="about-card" style="padding: 25px;">
-                    <h3 style="color: var(--neon-blue); font-family: var(--cyber-font); margin-bottom: 15px;">BUSINESS SITE</h3>
-                    <p>Многостраничные системы для представления бренда в цифровом пространстве.</p>
+
+
+                <!-- BUSINESS -->
+
+                <div class="about-card">
+
+                    <h3 style="color: var(--neon-blue); font-family: var(--cyber-font); margin-bottom: 15px;">
+                        BUSINESS SITE
+                    </h3>
+
+                    <ul>
+                        <li>Цена: <b>от 80 000 ₸</b></li>
+                        <li>Срок: <b>2–3 дня</b></li>
+                    </ul>
+
+                    <p><b>Что входит:</b></p>
+
+                    <ul>
+                        <li>Главная страница</li>
+                        <li>3–5 страниц сайта</li>
+                        <li>Современный дизайн</li>
+                        <li>Адаптация под телефон</li>
+                        <li>WhatsApp кнопка</li>
+                        <li>Форма заявок</li>
+                        <li>Галерея работ</li>
+                        <li>Публикация сайта</li>
+                    </ul>
+
                 </div>
-                <div class="about-card" style="padding: 25px;">
-                    <h3 style="color: var(--neon-blue); font-family: var(--cyber-font); margin-bottom: 15px;">TG_CONNECT</h3>
-                    <p>Автоматизированная система получения лидов прямо в мессенджер.</p>
+
+
+                <!-- SHOP -->
+
+                <div class="about-card">
+
+                    <h3 style="color: var(--neon-blue); font-family: var(--cyber-font); margin-bottom: 15px;">
+                        ONLINE SHOP
+                    </h3>
+
+                    <ul>
+                        <li>Цена: <b>от 100 000 ₸</b></li>
+                        <li>Срок: <b>3–5 дней</b></li>
+                    </ul>
+
+                    <p><b>Что входит:</b></p>
+
+                    <ul>
+                        <li>Каталог товаров</li>
+                        <li>Карточка товара</li>
+                        <li>Корзина</li>
+                        <li>Оформление заказа</li>
+                        <li>WhatsApp заказ</li>
+                        <li>Админ панель</li>
+                        <li>Добавление товаров</li>
+                        <li>Адаптация под телефон</li>
+                        <li>Публикация сайта</li>
+                    </ul>
+
                 </div>
+
             </div>
+
+        </section>
+
+        <section id="advantages" class="reveal">
+
+            <h2 class="section-title">ПРЕИМУЩЕСТВА.sys</h2>
+
+            <div class="projects-grid">
+
+                <div class="project-card">
+                    <h3>⚡ Быстро</h3>
+                    <p>Сайт за 1-3 дня</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>🎨 Современный дизайн</h3>
+                    <p>Стильные сайты с анимациями</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>📱 Адаптивность</h3>
+                    <p>Идеально работает на телефоне</p>
+                </div>
+
+                <div class="project-card">
+                    <h3>🚀 Публикация</h3>
+                    <p>Запускаю сайт в интернете</p>
+                </div>
+
+            </div>
+
+            <section class="reveal">
+
+                <h2 class="section-title">ПРОЦЕСС.dev</h2>
+
+                <div class="projects-grid">
+
+                    <div class="project-card">
+                        <h3>1. Обсуждение</h3>
+                        <p>Обсуждаем ваш проект и задачи</p>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>2. Дизайн</h3>
+                        <p>Создаю современный дизайн сайта</p>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>3. Разработка</h3>
+                        <p>Верстаю и программирую сайт</p>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>4. Запуск</h3>
+                        <p>Публикую сайт в интернете</p>
+                    </div>
+
+                </div>
+
+            </section>
+
         </section>
 
         <!-- CONTACTS -->
         <section id="contacts" class="reveal">
             <h2 class="section-title">КОНТАКТЫ.link</h2>
             <div class="contact-links">
-                <a href="https://api.whatsapp.com/send/?phone=77070273748&text&type=phone_number&app_absent=0" class="contact-icon"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=77070273748&text&type=phone_number&app_absent=0"
+                    class="contact-icon"><i class="fab fa-whatsapp"></i></a>
                 <a href="https://t.me/aslan_web" class="contact-icon"><i class="fab fa-telegram"></i></a>
             </div>
         </section>
     </div>
+
+    <a href="https://wa.me/77070273748" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <footer>
         <div class="container">
@@ -471,4 +677,7 @@
         });
     </script>
 </body>
+
 </html>
+
+
